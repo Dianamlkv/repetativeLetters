@@ -6,19 +6,19 @@ public class RepetativeLetters {
     static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter some text: ");
-        String text = scanner.nextLine();
+        String testedString = scanner.nextLine();
         System.out.println("Enter the letter: ");
-        char letter = scanner.next().charAt(0);
+        char findLetter = scanner.next().charAt(0);
 
         int count = 0;
-        text = text.toLowerCase();
-        text = text.replace(" ", "");
+        testedString = testedString.toLowerCase();
+        testedString = testedString.replace(" ", "");
 
-        for (int i = 0; i < text.length(); i++) {
-            if (letter == text.charAt(i)) {
+        for (int i = 0; i < testedString.length(); i++) {
+            if (findLetter == testedString.charAt(i)) {
                 count++;
             }
         }
-        System.out.println("Letter '" + letter + "' repeats " + count + " times");
+        System.out.println("Letter '" + findLetter + "' repeats " + count + " times");
     }
 }
